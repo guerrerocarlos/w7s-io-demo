@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "npm run clean && npm run build:backend && npm run build:frontend",
-    "build:backend": "esbuild backend/src/index.ts --bundle --format=esm --platform=browser --target=es2022 --outfile=backend/index.js",
+    "build:backend": "esbuild backend/src/index.ts --bundle --format=esm --platform=browser --target=es2022 --minify --outfile=backend/index.js",
     "build:frontend": "vite build",
     "check": "npm run typecheck && npm run build",
     "clean": "rm -rf backend/index.js frontend/dist",
